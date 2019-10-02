@@ -193,7 +193,7 @@ nav{
 	font-family: "Montserrat";
 	animation-name: navmover;
 	animation-duration: 1s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 	animation-fill-mode: backwards;
 }
@@ -221,7 +221,7 @@ nav{
 
 	animation-name: navmover;
 	animation-duration: 1s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: backwards;
 
@@ -260,7 +260,7 @@ main{
 
 	animation-name: sizer;
 	animation-duration: 1s;
-	animation-delay: 4s;
+	animation-delay: 1s;
 	animation-fill-mode: forwards;
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 }
@@ -325,7 +325,7 @@ main{
 
 	animation-name: bannersizer;
 	animation-duration: 1s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 	animation-fill-mode: both;
 }
