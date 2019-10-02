@@ -510,12 +510,13 @@ form {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	width: 400px;
 }
 
 .underline {
 	position: absolute;
 	display: block;
-	top: 113px;
+	top: 93px;
 	height: 3px;
 	width: 0%;
 	background-color: #10346e;
@@ -527,11 +528,11 @@ form {
 input {
 	height: 40px;
 	width: 300px;
-	font-size: 28px;
+	font-size: 24px;
 	box-sizing: border-box;
 	padding: 3px;
 	outline: none;
-	padding: 0;
+	padding: 10px;
 	margin: 0;
 }
 
@@ -540,9 +541,59 @@ input:focus + .underline {
 }
 
 .footer__elem {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 300px;
 	margin: 20px;
+	text-align: left;
+	align-items: center;
+}
+
+.ema {
+	width: 100%;
+}
+
+.footer__elem label {
+	width: 25px%;
+	opacity: 0.7;
+
+}
+
+.checkbox {
+	z-index: 1;
+	width: 25px;
+	opacity: 0;
+}
+
+.checkmark {
+	position: absolute;
+	left: 12;
+	top: 14px;
+	width: 25px;
+	height: 25px;
+	background-color: #17e65c;
+	border-radius: 4px;
+	clip-path: circle(0px);
+	transition: 0.3s ease-in-out;
+}
+.checkmark_bg {
+	position: absolute;
+	left: 12;
+	top: 14px;
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	border: 2px solid #10346e;
+	border-radius: 4px;
+}
+
+.checkbox:checked + .checkmark {
+	clip-path: circle(25px);
+}
+
+.iAgree {
+	width: 70%;
+	text-align: center;
 }
