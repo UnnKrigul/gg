@@ -556,7 +556,7 @@ input:focus + .underline {
 }
 
 .footer__elem label {
-	width: 25px%;
+	width: 25px;
 	opacity: 0.7;
 
 }
