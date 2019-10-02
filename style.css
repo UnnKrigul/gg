@@ -179,9 +179,65 @@ header{
 	justify-content: space-between;
 }
 
-nav{
+#menu {
+	position: absolute;
+	visibility: hidden;
+	z-index: -1;
+}
+
+#menu:checked + .menu__bg {
+	opacity: 0.4;
+	visibility: visible;
+}
+
+#menu:checked + .menu__bg + .menu__drawer {
+	clip-path:inset(0 0 0 0);
+}
+
+.menu__btn {
 	position: relative;
 	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+
+	width: 45px;
+	height: 45px;
+}
+
+.menu__btn-line {
+	width: 100%;
+	height: 20%;
+	border-radius: 4px;
+	background-color: #10346e;
+}
+
+.menu__bg {
+	position: fixed;
+	display: block;
+	visibility: hidden;
+	height: 100vh;
+	width: 100%;
+	top:0;
+	left: 0;
+	background-color:#000;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.4s;
+}
+
+.menu__drawer{
+	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+
+	height: 100vh;
+	width: 30%;
+	right: 0;
+	top: 0;
+	background-color: #10346e;
+	z-index: 1;
+	clip-path:inset(0 0 0 100%);
+	transition: 0.2s ease-in-out;
 }
 .nav__item{
 	position: relative;
@@ -191,11 +247,7 @@ nav{
 	font-size: 16px;
 	font-weight:500;
 	font-family: "Montserrat";
-	animation-name: navmover;
-	animation-duration: 1s;
-	animation-delay: 2s;
-	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
-	animation-fill-mode: backwards;
+	color: #fff;
 }
 .nav__item:hover,
 .nav__item.active{
@@ -254,7 +306,8 @@ main{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 2;
+	clip-path: inset(0 0 0 0);
 
 	background-color: #1f4978;
 
@@ -265,8 +318,8 @@ main{
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 }
 @keyframes sizer {
-	0%		{left: 0;}
-	100%	{left: 100%;}
+	0%		{clip-path: inset(0 0 0 0);}
+	100%	{clip-path: inset(0 0 0 100%);}
 }
 .loading__elem {
 	display: flex;
@@ -353,7 +406,7 @@ main{
 
 	animation-name: titlemova;
 	animation-duration: 1s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 	animation-fill-mode: both;
 }
@@ -365,7 +418,7 @@ main{
 
 	animation-name: titlemova;
 	animation-duration: 1s;
-	animation-delay: 5s;
+	animation-delay: 2s;
 	animation-timing-function: cubic-bezier(1,-0.02, 0.06, 1.02);
 	animation-fill-mode: both;
 }
